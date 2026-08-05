@@ -29,7 +29,7 @@ function Login() {
 
   setTimeout(() => {
     setSuccess(false);
-    navigate("/");
+    navigate("/home");
   }, 1000);
 
   console.log("Email:", email);
