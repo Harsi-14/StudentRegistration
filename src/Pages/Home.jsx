@@ -6,6 +6,8 @@ function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [dateofbirth, setDateofbirth] = useState("");
+  const [phone, setPhone]= useState("");
+  const [countryCode, setCountryCode] = useState("+91");
   const [college, setCollege] = useState("");
 
   const [success, setSuccess] = useState(false);
@@ -24,6 +26,7 @@ function Home() {
       email === "" ||
       password === "" ||
       dateofbirth === "" ||
+      phone ===""||
       college === ""
     ) {
       setError(true);
@@ -50,12 +53,15 @@ setTimeout(() => {
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Date of Birth:", dateofbirth);
+    console.log("Phone:", countryCode + phone);
     console.log("College:", college);
 
     setName("");
     setEmail("");
     setPassword("");
     setDateofbirth("");
+    setPhone("");
+    setCountryCode("+91");
     setCollege("");
   }
 
@@ -113,6 +119,44 @@ setTimeout(() => {
             value={dateofbirth}
             onChange={(event) => setDateofbirth(event.target.value)}
           />
+
+          <div className="flex gap-2 mb-4">
+
+  <select
+    className="p-3 border border-gray-400 rounded text-black"
+    value={countryCode}
+    onChange={(e)=>setCountryCode(e.target.value)}
+  >
+
+    <option value="+91">🇮🇳 +91</option>
+    <option value="+1">🇺🇸 +1</option>
+    <option value="+44">🇬🇧 +44</option>
+    <option value="+61">🇦🇺 +61</option>
+    <option value="+81">🇯🇵 +81</option>
+
+  </select>
+
+
+  <input
+    className="w-full p-3 border border-gray-400 rounded text-black focus:outline-none focus:ring-2 focus:ring-purple-400"
+    type="text"
+    placeholder="Enter Your Phone Number"
+    value={phone}
+    onChange={(e)=>setPhone(e.target.value)}
+  />
+
+</div>
+
+
+{
+ phone.length > 0 && phone.length !== 10 &&
+
+ <p className="text-red-500 mb-3">
+
+    ❌ Phone number must contain 10 digits
+
+ </p>
+}
 
           <input
             className={inputClass}
