@@ -1,0 +1,9 @@
+@import "tailwindcss";
+.student {
+  width: 300px;
+  border: 2px solid rgb(81, 3, 45);
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+}

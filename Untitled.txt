@@ -1,0 +1,168 @@
+
+Week 1 – React Fundamentals
+
+Day 1
+
+Topics:
+
+What is React?
+
+
+Why React?
+SPA (Single Page Application)
+Virtual DOM
+React Project Structure
+Vite
+
+Practice:
+
+Install Node.js
+Install VS Code
+Create your first React app
+Run the project
+Understand the folder structure
+
+Mini Task:
+
+Change text
+Add heading
+Add image
+Add button	Day 2
+
+Topics:
+
+JSX
+Expressions in JSX
+JavaScript inside JSX
+
+Practice:
+
+Create a profile page
+Display variables
+Display current date
+Display age
+
+Mini Project:
+
+Personal Profile Card
+
+
+
+Day 3
+
+Topics:
+
+Components
+Functional Components
+Component Reuse
+
+Practice:
+Create:
+
+Header
+Footer
+Navbar
+Card
+
+Mini Project:
+
+Restaurant Landing Page
+
+	
+Day 4
+
+Topics:
+
+Props
+
+Practice:
+Pass:
+
+Name
+Age
+Image
+Course
+
+Mini Project:
+
+Student Card
+
+Day 5
+
+Topics:
+
+Event Handling
+
+Learn:
+
+onClick
+onChange
+onSubmit
+
+Mini Project:
+
+Like Button
+Click Counter
+	Day 6
+
+Topics:
+
+useState()
+
+Practice:
+
+Counter
+Toggle
+Hide/Show Password
+
+Mini Project:
+
+Counter App
+
+Day 7
+
+Revision Day
+
+Build without watching any tutorial:
+
+Profile Card
+Counter
+Navbar
+Student Card
+
+	
+				
+				
+				
+				
+
+
+
+Day 6
+
+Topics:
+
+useState()
+
+Practice:
+
+Counter
+Toggle
+Hide/Show Password
+
+Mini Project:
+
+Counter App
+
+Day 7
+
+Revision Day
+
+Build without watching any tutorial:
+
+Profile Card
+Counter
+Navbar
+Student Card
+
+
