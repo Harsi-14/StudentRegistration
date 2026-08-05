@@ -75,7 +75,7 @@ setTimeout(() => {
 
       <div className="bg-white/80 max-w-md mx-auto p-6 rounded-xl shadow-xl">
         <h1 className="text-3xl font-bold text-center mb-8">
-          Student Registration
+          🎓 Student Registration Portal
         </h1>
 
         <h4 className="text-center mb-6">
