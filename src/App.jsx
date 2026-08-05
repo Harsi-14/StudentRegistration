@@ -20,7 +20,7 @@ function App() {
       <nav className="w-full bg-gray-800 p-4">
         <div className="flex justify-end items-center gap-4">
           <NavLink
-            to="/login"
+            to="/"
             className={({ isActive }) =>
               isActive
                 ? "text-yellow-300 font-bold"
@@ -31,7 +31,7 @@ function App() {
           </NavLink>
 
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) =>
               isActive
                 ? "text-yellow-300 font-bold"
@@ -81,8 +81,8 @@ function App() {
 
       <Routes>
         
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/about" element={<About />} />
