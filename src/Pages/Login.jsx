@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ setIsLoggedIn }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,6 +27,9 @@ function Login() {
   
   setSuccess(true);
 
+  localStorage.setItem("isLoggedIn", "true");
+  setIsLoggedIn(true);
+  
   setTimeout(() => {
     setSuccess(false);
     navigate("/home");

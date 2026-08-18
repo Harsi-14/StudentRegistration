@@ -7,8 +7,9 @@ function Home() {
   const [password, setPassword] = useState("");
   const [dateofbirth, setDateofbirth] = useState("");
   const [phone, setPhone]= useState("");
-  const [countryCode, setCountryCode] = useState("+91");
-  const [college, setCollege] = useState("");
+  const [countryCode, setCountryCode] = useState("");
+  const [course, setCourse] = useState("");
+
 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -27,7 +28,7 @@ function Home() {
       password === "" ||
       dateofbirth === "" ||
       phone ===""||
-      college === ""
+      course ==="" 
     ) {
       setError(true);
 
@@ -54,7 +55,8 @@ setTimeout(() => {
     console.log("Password:", password);
     console.log("Date of Birth:", dateofbirth);
     console.log("Phone:", countryCode + phone);
-    console.log("College:", college);
+    console.log("Course:",course);
+    
 
     setName("");
     setEmail("");
@@ -62,7 +64,8 @@ setTimeout(() => {
     setDateofbirth("");
     setPhone("");
     setCountryCode("+91");
-    setCollege("");
+    setCourse("");
+  
   }
 
   return (
@@ -81,7 +84,7 @@ setTimeout(() => {
 
       <div className="bg-white/80 max-w-md mx-auto p-6 rounded-xl shadow-xl">
         <h1 className="text-3xl font-bold text-center mb-8">
-          🎓 Student Registration Portal
+          Student Registration Portal
         </h1>
 
         <h4 className="text-center mb-6">
@@ -144,27 +147,31 @@ setTimeout(() => {
     value={phone}
     onChange={(e)=>setPhone(e.target.value)}
   />
+  </div>
+  {
+  phone.length > 0 && phone.length !== 10 &&
+  <p className="text-red-500 mb-3">
+    Phone number must contain 10 digits
+    </p>
+  }
 
-</div>
-
-
-{
- phone.length > 0 && phone.length !== 10 &&
-
- <p className="text-red-500 mb-3">
-
-    ❌ Phone number must contain 10 digits
-
- </p>
-}
-
-          <input
-            className={inputClass}
-            type="text"
-            placeholder="Enter Your College Name"
-            value={college}
-            onChange={(event) => setCollege(event.target.value)}
-          />
+  <select
+  className={inputClass}
+  value={course}
+  onChange={(event) => setCourse(event.target.value)}
+  >
+    <option value="">Select Your Course</option>
+    <option value="AI&DS">AI&DS</option>
+    <option value="AI&ML">AI&ML</option>
+    <option value="CSE">CSE</option>
+    <option value="EEE">EEE</option>
+    <option value="MECH">MECH</option>
+    <option value="ECE">ECE</option>
+    <option value="CYBER SECURITY">CYBER SECURITY</option>
+    <option value="CSBS">CSBS</option>
+  </select>
+  
+ 
 
           <button
             type="submit"
